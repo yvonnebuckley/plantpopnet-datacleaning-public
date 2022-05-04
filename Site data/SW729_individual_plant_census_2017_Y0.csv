@@ -1,0 +1,131 @@
+site_code,transect_Lat_start,transect_Lon_start,transect_Lat_stop,transect_Lon_stop,transect,plot,number_seedlings,plant_id,x_coord,y_coord,suspected_clone,survival,no_rosettes,rosette_number,no_leaves,leaf_length,leaf_width,no_fl_stems,fl_stem_height,inflor_length,inflor_phenology,disease..yes.no.,disease_comments,herbivory..yes.no.,herbivory_comments,other_comments,c_year,s_year
+SW729,NA,NA,NA,NA,T1,1,NA,12,12,34,no,NA,0,2,6,147,13,1,195,7,seeds developing,yes,white bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,11,12,8,no,NA,0,1,2,124,3,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,11,12,8,no,NA,0,2,3,101,6,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,31,11,19,no,NA,0,1,5,79,8,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,31,11,19,no,NA,0,2,3,74,5,0,0,0,0,yes,white bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,42,16,25,no,NA,0,1,6,122,1,0,0,0,0,yes,yellow bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,12,12,34,no,NA,0,1,6,64,11,0,0,0,0,no,NA,yes,heavily eaten,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,12,12,34,no,NA,0,3,5,168,13,1,298,12,seeds developing,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,75,35,30,no,NA,0,1,4,151,7,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,67,39,27,no,NA,0,1,7,124,11,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,9,24,31,no,NA,0,1,4,103,7,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,1,NA,5,7,15,no,NA,0,1,6,65,11,0,0,0,0,no,NA,yes,Feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,2,NA,86,5,5,no,NA,0,1,4,96,13,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,2,NA,96,29,24,no,NA,0,2,5,155,10,1,226,0,0,no,NA,yes,feeding holes,stem eaten (over 226),2017,Y0
+SW729,NA,NA,NA,NA,T1,2,NA,96,29,24,no,NA,0,1,2,116,4,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,2,NA,19,5,19,no,NA,0,4,6,142,11,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,2,NA,19,5,19,no,NA,0,3,9,12,7,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,2,NA,19,5,19,no,NA,0,2,8,182,18,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,2,NA,19,5,19,no,NA,0,1,6,142,10,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,3,NA,41,11,35,no,NA,0,1,4,135,11,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,3,NA,14,7,41,no,NA,0,1,6,146,18,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,3,NA,39,40,9,no,NA,0,1,5,95,16,1,380,12,seeds developing,no,NA,yes,feeding holes_herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,3,NA,68,37,13,no,NA,0,1,7,145,17,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,3,NA,51,17,29,no,NA,0,1,5,112,9,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,3,NA,77,20,29,yes,NA,0,1,3,65,2,0,0,0,0,no,NA,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,3,NA,73,20,31,yes,NA,0,1,6,110,7,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,4,NA,65,36,3,no,NA,0,1,8,125,20,2,NA,NA,0,no,NA,yes,feeding holes_ herbivore,Huge root node,2017,Y0
+SW729,NA,NA,NA,NA,T1,4,NA,22,25,21,no,NA,0,1,5,120,9,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,5,NA,48,39,36,no,NA,0,1,4,112,9,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,5,NA,3,37,49,no,NA,0,1,7,99,8,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,5,NA,87,47,45,no,NA,0,1,5,64,4,0,0,0,0,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,5,NA,7,15,8,no,NA,0,1,6,65,11,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,26,39,45,no,NA,0,2,4,124,19,0,0,0,0,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,26,39,45,no,NA,0,3,5,121,17,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,26,39,45,no,NA,0,4,6,140,19,0,0,0,0,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,26,39,45,no,NA,0,6,10,152,23,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,99,40,42,no,NA,0,1,4,126,12,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,26,39,45,no,NA,0,5,5,156,23,0,0,0,0,yes,NA,yes,feeding holes_ herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,26,39,45,no,NA,0,1,3,110,15,0,0,0,0,no,NA,yes,feeding holes_ herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,92,48,39,no,NA,0,1,6,116,21,0,0,0,0,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,1,46,22,yes,NA,0,1,3,91,6,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,79,46,26,yes,NA,0,1,5,110,14,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,2,39,28,no,NA,0,1,9,177,15,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,89,48,36,no,NA,0,1,4,53,7,0,0,0,0,no,NA,yes,herbivore,longest leaf eaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,6,NA,18,18,24,no,NA,0,1,5,108,13,0,0,0,0,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,17,36,20,no,NA,0,5,4,68,4,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,17,36,20,no,NA,0,2,2,81,4,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,17,36,20,no,NA,0,4,5,161,14,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,93,38,35,no,NA,0,2,4,183,21,1,NA,NA,0,yes,white bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,93,38,35,no,NA,0,1,12,196,31,1,NA,NA,0,yes,white bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,94,0,39,no,NA,0,1,4,76,7,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,17,36,20,no,NA,0,3,5,124,11,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,27,38,44,no,NA,0,1,6,121,0,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,10,49,9,no,NA,0,2,4,121,17,0,0,0,0,yes,white bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,10,49,9,no,NA,0,1,3,131,16,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,7,NA,17,36,20,no,NA,0,1,5,124,8,0,0,0,0,no,NA,yes,feeding holes_ herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,8,NA,6,20,26,no,NA,0,1,7,99,7,0,0,0,0,no,NA,yes,feeding holes_ herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,8,NA,20,9,27,no,NA,0,1,3,106,9,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,8,NA,56,39,17,yes,NA,0,1,5,140,15,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,8,NA,90,40,18,yes,NA,0,1,4,133,18,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,10,NA,23,32,25,no,NA,0,1,3,166,6,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,10,NA,44,14,15,no,NA,0,1,3,47,7,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,10,NA,52,49,50,no,NA,0,2,5,166,19,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,10,NA,52,49,50,no,NA,0,1,5,120,11,0,0,0,0,no,NA,yes,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,11,NA,30,18,49,no,NA,0,1,5,109,14,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,13,NA,34,37,12,no,NA,0,1,7,93,12,1,NA,NA,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,13,NA,40,30,6,no,NA,0,1,5,45,7,0,0,0,0,no,NA,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,13,NA,55,26,2,yes,NA,0,1,2,77,4,0,0,0,0,no,NA,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,13,NA,28,30,1,yes,NA,0,1,6,86,8,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,13,NA,7,35,17,no,NA,0,1,5,154,11,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,36,8,42,no,NA,0,1,3,126,10,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,4,41,27,no,NA,0,1,4,67,4,0,0,0,0,no,NA,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,54,35,20,no,NA,0,1,5,65,12,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,72,31,15,no,NA,0,1,3,71,6,0,0,0,0,no,NA,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,38,48,4,no,NA,0,1,6,103,8,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,38,48,4,no,NA,0,2,5,81,8,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,80,13,39,no,NA,0,1,5,141,9,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,61,9,46,no,NA,0,1,4,66,9,1,293,9,seeds developing,yes,yellow bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,13,7,45,yes,NA,0,1,3,115,9,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,14,NA,59,42,8,no,NA,0,1,5,34,4,0,0,0,0,no,NA,yes,herbivore_ feeding holes,eaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,63,9,5,no,NA,0,1,4,89,9,1,274,15,seeds developing,yes,NA,yes,mostly eaten,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,15,5,0,yes,NA,0,1,3,93,8,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,15,5,0,yes,NA,0,3,3,90,7,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,81,17,38,no,NA,0,1,6,66,20,1,307,12,seeds developing,no,NA,yes,feeding holes_ herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,81,17,38,no,NA,0,2,4,68,15,1,275,12,seeds developing,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,95,12,44,no,NA,0,1,4,70,9,0,0,0,0,no,NA,yes,herbivores,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,15,5,0,yes,NA,0,2,3,15,5,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,57,26,34,no,NA,0,1,3,64,3,0,0,0,0,no,NA,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,83,17,44,no,NA,0,2,4,86,8,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,15,NA,83,17,44,no,NA,0,1,4,107,12,0,0,0,0,no,NA,yes,feeding holes_ herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,16,NA,100,20,45,no,NA,0,1,6,135,13,0,0,0,0,yes,yellow bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,16,NA,43,31,31,no,NA,0,1,4,109,10,0,0,0,0,no,NA,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,17,NA,8,5,13,no,NA,0,1,6,40,8,0,0,0,0,yes,white bits_ yellow bits,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,17,NA,47,43,31,no,NA,0,1,4,70,6,0,0,0,0,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,18,NA,21,50,0,yes,NA,0,1,5,60,8,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,18,NA,36,34,18,no,NA,0,1,9,78,15,0,0,0,0,no,NA,yes,herbivores,longest leaf eaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,18,NA,91,26,23,no,NA,0,1,6,84,12,0,0,0,0,yes,yellow bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,18,NA,71,45,40,no,NA,0,1,3,93,9,0,0,0,0,yes,yellow bits,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,18,NA,50,26,29,no,NA,0,2,5,63,5,0,0,0,0,yes,bown bits,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,18,NA,50,26,29,no,NA,0,1,6,74,5,0,0,0,0,yes,yellow bits_ brown bits,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,19,NA,69,4,45,no,NA,0,1,3,98,7,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,19,NA,58,41,23,no,NA,0,1,7,105,15,3,306,17,seeds developing,yes,yellow,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,19,NA,74,48,3,yes,NA,0,1,5,91,12,0,0,0,0,yes,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,19,NA,45,18,17,no,NA,0,1,7,60,11,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,19,NA,62,0,0,yes,NA,0,1,5,44,8,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,19,NA,97,10,4,no,NA,0,1,6,56,6,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,19,NA,32,45,7,yes,NA,0,1,11,101,12,0,0,0,0,yes,yellow bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,70,6,8,yes,NA,0,1,3,115,9,0,0,0,0,yes,white bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,66,10,7,yes,NA,0,1,6,70,14,0,0,0,0,yes,brown bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,16,27,14,yes,NA,0,1,7,57,8,0,0,0,0,no,NA,yes,feeding holes_herbivore,heavily eaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,60,19,11,no,NA,0,1,6,51,10,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,53,1,18,yes,NA,0,1,6,35,11,0,0,0,0,no,NA,yes,feeding holes_ lots_ herbivores,all leaves eaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,101,26,13,yes,NA,0,1,11,47,8,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,102,19,11,no,NA,0,1,3,61,12,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,103,7,30,no,NA,0,1,7,73,17,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,64,39,46,no,NA,0,1,4,47,11,0,0,0,0,yes,yellow bits_ brown bits,yes,feeding holes,heavily eaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,25,34,46,yes,NA,0,1,5,30,8,0,0,0,0,yes,yellow bits,yes,feeding holes_herbivore,longest leavesaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,25,34,46,yes,NA,0,2,2,60,5,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,29,37,45,yes,NA,0,1,6,51,13,0,0,0,0,yes,white bits,yes,feeding holes_herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,88,3,0,no,NA,0,1,3,90,8,0,0,0,0,no,NA,yes,herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,76,21,36,no,NA,0,1,6,74,14,0,0,0,0,yes,brown bits,yes,feeding holes_herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,82,12,31,no,NA,0,1,5,94,11,0,0,0,0,yes,brown bits,no,NA,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,46,34,21,yes,NA,0,1,3,65,11,0,0,0,0,yes,white bits_ brown bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,98,36,24,yes,NA,0,2,5,113,10,0,0,0,0,yes,white bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,98,36,24,yes,NA,0,1,6,84,14,0,0,0,0,no,NA,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,78,40,20,no,NA,0,1,6,96,15,0,0,0,0,yes,yellow bits,yes,feeding holes,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,84,21,27,no,NA,0,1,7,65,16,0,0,0,0,yes,yellow bits_ brown bits,yes,feeding holes_herbivore,longest leaf eaten,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,33,19,20,no,NA,0,1,4,135,19,0,0,0,0,no,NA,yes,feeding holes_herbivore,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,35,2,21,yes,NA,0,1,7,58,10,0,0,0,0,no,NA,yes,feeding holes_ lots_ herbivores,NA,2017,Y0
+SW729,NA,NA,NA,NA,T1,20,NA,85,4,20,yes,NA,0,1,11,57,12,0,0,0,0,no,NA,yes,feeding holes_ lots_ herbivores,NA,2017,Y0

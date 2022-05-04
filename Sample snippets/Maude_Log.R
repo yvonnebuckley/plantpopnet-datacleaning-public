@@ -1,0 +1,108 @@
+#####
+## Maude's first attempts to cleaning some of the data
+#####
+
+
+data<-read.csv("./PPNdata/compiled_data_2018-06-12.csv",sep=",",header=T)
+
+data[which(is.na(data$plant_id)&data$site_code=="AC"),]
+#Observations: 
+#they added an empty line per plot with seedlings
+
+
+data<-data[-which(is.na(data$plant_id)&data$site_code=="AC"),]
+data<-data[-which(is.na(data$plant_id)&data$site_code=="ACR"),]
+
+#A rosette seem to have been missing in y1, so shoot it: 
+data[which(data$plant_id=="117b"),]
+data<-data[-which(data$plant_id=="117b"),]
+
+
+#### Change "na" and "" cells for NA ####
+levels(data$leaf_length)
+unique(data$leaf_length)
+data$leaf_length[which(data$leaf_length=="na")]<-NA
+data$leaf_length[which(data$leaf_length=="")]<-NA
+
+levels(data$leaf_width)
+data$leaf_width[which(data$leaf_width=="na")]<-NA
+data$leaf_width[which(data$leaf_width=="")]<-NA
+
+levels(data$no_leaves)
+data$no_leaves[which(data$no_leaves=="na")]<-NA
+data$no_leaves[which(data$no_leaves=="")]<-NA
+
+unique(data$no_fl_stems)
+data$no_fl_stems[which(data$no_fl_stems=="na")]<-NA
+data$no_fl_stems[which(data$no_fl_stems=="")]<-NA
+
+
+
+##Text in normally numeric columns
+for(i in ncol(data)){
+  data[,i]<-as.character(data[,i])
+}
+names(data) #columns 14 to 21 should be numbers only 
+
+
+for(i in c(14:21)){
+  print(names(data)[i])
+  cha <- (str_extract(data[,i], "[aA-zZ]+"))
+  print(cha[which(is.na(cha)==F)])
+}#Awesome. So no_rosettes, rosettes_number, no_leaves, leaf_length, leaf width and no_fl_stems and fl_stem_height have only numbers!
+#Edit compile 24th of May; inflor_length doesn't!
+data$inflor_length
+
+###ACR has got values for several floral stems and infloresence heights in one cell, separated by a comma.
+#Here the script to select the heighest stem, and keep only its size
+#Then select the corresponding inflorescence length and take only this one. 
+
+ACR_st<-list()
+sub<-subset(data,data$site_code=="ACR")
+names(data)[20]
+for(i in 1:nrow(data[which(data$site_code=="ACR"),])){
+  ACR_st[i]<-str_split(sub$fl_stem_height[i],pattern=",") #Separate the different values in cell
+}
+ACR_stem_height<-c()
+ACR_stem_pos<-c()
+for(i in 1:length(ACR_st)){
+  print(i)
+  if(is.na(ACR_st[[i]])){
+    is.na(ACR_stem_height[i])<-c(1)
+    is.na(ACR_stem_pos[i])<-c(1)
+  }else{
+    ACR_stem_height[i]<-max(ACR_st[[i]],na.rm=T)  #select only highest stem
+    ACR_stem_pos[i]<-which(ACR_st[[i]]==max(ACR_st[[i]],na.rm=T)) #store it's position (to select corresponding inflorescence)
+  }}
+
+ACR_infl<-list()
+names(data)[21]
+for(i in 1:nrow(data[which(data$site_code=="ACR"),])){
+  ACR_infl[i]<-str_split(sub$inflor_length[i],pattern=",")
+}
+ACR_infl_height<-c()
+for(i in 1:length(ACR_infl)){
+  if(is.na(ACR_stem_pos[i])){
+    is.na(ACR_infl_height[i])<-c(1)
+  }else{
+    ACR_infl_height[i]<-ACR_infl[[i]][ACR_stem_pos[i]] #keep only the inflorescence corresponding to the tallest stem
+  }}
+
+ACR_infl_height <- as.numeric(str_extract(ACR_infl_height, "[0-9]+")) #Remove all the non numeric values
+#cha <- (str_extract(data[,i], "[aA-zZ]+"))
+
+data$inflor_length[which(data$site_code=="ACR")]<-ACR_infl_height #insert in original data set (in my case "data")
+data$fl_stem_height<-as.character(data$fl_stem_height)
+data$fl_stem_height[which(data$site_code=="ACR")]<-ACR_stem_height
+
+###Now recheck that there are only numbers: 
+for(i in c(14:21)){
+  print(names(data)[i])
+  cha <- (str_extract(data[,i], "[aA-zZ]+"))
+  print(cha[which(is.na(cha)==F)])
+}#Better. Can go on now. 
+
+for(i in c(14:19)){
+  data[,i]<-as.numeric(as.character(data[,i]))
+}
+
