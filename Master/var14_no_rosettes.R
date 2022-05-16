@@ -127,23 +127,24 @@ print("Sites HV 2014, TO 2015, AC 2015 have all recorded multiple no_rosettes bu
 if(length(chex2$len_plant_uid_year >= 44)) warning("mismatches still present, recheck chex2, ")
 cat(paste(length(chex2$len_plant_uid_year)-43, "individuals need to be corrected in the master data"))
 
+##### Chunk below not applicable for Y0 dataset ######
 #site MACD has recorded full rows for additional flowering stems. Remove these additonal rows but keep the largest fl.stem
 #MACD accounts for 413 additionals rows due to this (as of Y2 data)
 #Please double check that exrows1 is not removing additonal data
-print("site MACD has measured every flowering stem and recorded as duplicated rows. These will be cleaned below")
-exrows <- mydata
+#print("site MACD has measured every flowering stem and recorded as duplicated rows. These will be cleaned below")
+#exrows <- mydata
 
-exrows1 <- exrows %>% 
-  group_by(plant_unique_id, unique_plot_id, rosette_ID) %>% 
-  filter(fl_stem_height == max(fl_stem_height)|is.na(fl_stem_height)) %>% 
-  ungroup() 
+#exrows1 <- exrows %>% 
+#  group_by(plant_unique_id, unique_plot_id, rosette_ID) %>% 
+#  filter(fl_stem_height == max(fl_stem_height)|is.na(fl_stem_height)) %>% 
+# ungroup() 
 
 
-chec <- setdiff(exrows, exrows1)  
-if(length(chec$rosette_ID >= 416))warning("additional ")
-cat(paste(length(chec$rosette_ID)-416, "rows have been removed. Consult 'Chec' object to ensure these have not mistakenly been removed"))
-
-mydata <- exrows1
+# chec <- setdiff(exrows, exrows1)  
+# if(length(chec$rosette_ID >= 416))warning("additional ")
+# cat(paste(length(chec$rosette_ID)-416, "rows have been removed. Consult 'Chec' object to ensure these have not mistakenly been removed"))
+# 
+# mydata <- exrows1
 
 
 ## clean up

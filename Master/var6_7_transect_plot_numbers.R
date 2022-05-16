@@ -14,12 +14,13 @@
 #Error: Duplicate level of "T2" and "T2 "
 
 pdata <- mydata
+pdata$transect <- as.factor(as.character(pdata$transect))
 #Solution: Use trimsw to removes white space from character string
 levels(pdata$transect) <- trimws(levels(pdata$transect))
 
 #check result
 levels(pdata$transect)
-#[1] "1"  "t1" "T1" "T2" "T3" "T4" "T5" "T6" "T7"
+#"1"  "T1" "T2" "T3" "T4" "T5" "T6" "T7"
 warning("Clean up lower case t and transects without a T")
 
 pdata$transect <- gsub("t1", "T1", pdata$transect)
@@ -38,7 +39,7 @@ print("values for site BG are potentially solved by running var_9 plant ID scrip
 
 
 ##2. Check plot levels, check for NA's & fix
-
+pdata$plot <- as.factor(as.character(pdata$plot))
 levels(pdata$plot)
 
 
@@ -67,8 +68,8 @@ plot_na <- pdata$unique_plot_year_id[which(is.na(pdata$plot))]
 print(plot_na)
 print("values for site BG are potentially solved by running var_9 plant ID script")
 
-## replacing NA in ZG with plot number of same plant id in previous year
 ######## THIS CHUNK NO LONGER REQUIRED BUT MAY BE USEFUL IN FUTURE - Alain 20/06/2019 ######
+## replacing NA in ZG with plot number of same plant id in previous year
 #ZG <- droplevels(subset(pdata,  pdata$site_code == "ZG")  )
 #ZG2 <- droplevels(subset(ZG, ZG$plant_id == ZG$plant_id[is.na(ZG$plot)]))
 #ZG3 <- droplevels(subset(ZG, is.na(ZG$plot)))

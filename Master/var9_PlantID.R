@@ -48,7 +48,7 @@ Conca$plant_unique_id<-paste(Conca$site_code,Conca$transect,Conca$plot,ids3,sep 
 
 ppn<-rbind(ToConca,Conca)
 ppn$plant_unique_id
-
+ppn$plant_unique_id <- as.factor(ppn$plant_unique_id)
 
 #Trouble shooting
 #A: Some names have nas concatenated; why? 
@@ -59,7 +59,7 @@ lines_with_na <- grep("NA",ppn$plant_unique_id)
 #View(ppn[lines_with_na,])
 dim(ppn[lines_with_na,])
 print(paste("Number of Plant IDs that have NAs in them: ",nrow(ppn[lines_with_na,])))
-droplevels(unique(mydata$site_code[lines_with_na]))
+droplevels(unique(ppn$site_code[lines_with_na]))
 
 #A.1: Some have a line per empty plot --> delete, unless there is a number of seedling
 #A.2: Some have a bunch of rows for additionnal stems ---> delete
@@ -187,3 +187,4 @@ mydata <- ppn
 
 
 ##Clean columns after script
+rm(na_ppn, ppn, ppn2,lines_with_na, tt, test_noleaves, line, line_na, have_one_single_row_in_data_set, have_seedlings)

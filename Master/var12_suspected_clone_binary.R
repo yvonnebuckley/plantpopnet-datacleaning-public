@@ -36,7 +36,7 @@ mydata$suspected_clone_binary[mydata$suspected_clone_binary == 0] <- "no"
 mydata$suspected_clone_binary[grep("[[:digit:]]", mydata$suspected_clone_binary, ignore.case = TRUE)] <- "yes"
 
 ## check: table should show only levels yes and no
-#table(mydata$suspected_clone_binary)
+table(mydata$suspected_clone_binary)
 
 
 ## Tidy up
@@ -49,7 +49,7 @@ if(any(x != TRUE)) warning('unknown level')
 
 ## print plant ids where suspected_clone_binary level is not yes, no or NA
 print(mydata$plant_id[mydata$suspected_clone_binary %nin% c("yes", "no", NA)], max.levels = 0)
-
+print("if character(0), no unwanted values are present")
 ## clean up
 mydata <- droplevels(mydata)
 rm(x)

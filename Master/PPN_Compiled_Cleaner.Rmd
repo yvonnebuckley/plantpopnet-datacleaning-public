@@ -8,10 +8,6 @@ This is the primary file for plantpopnet data cleaning.It is designed to run on 
 
 Each error was assigned a unique identifier. Once an error is indentified by the diagnostic, the solution can be called from a script (of the same indentifier name) and solved, before moving on to the next error. Error logs should be recorded in annotated text within this document. Error types were initially diagnosed and solved for a static test compiled data file (ca. 7000 plants). Once this script is complete and tested successfully on the test data using both Mac and PC platforms, a new static compiled data file will be used for further testing and error diagnosis (complete data from 2014- May 2019). From June 2019 this code can be run for individual data files as submitted by PI's and post-cleaning they can be compiled to the full data-frame or new data can be compiled with the pre-cleaned data from 2014 onwards and cleaned using this script to produce a single data object. ## This last line is not the case. Individual files are cleaned with a seperate script. 
 
-```{r git login}
-
-
-```
 
 ```{r setup}
 knitr::opts_knit$set(root.dir = "~/Plantpopnet-Data-Cleaning/Master")
@@ -29,10 +25,10 @@ The demographic census file is input as 'data_orig' which is kept unchanged for 
 The site description file is input as 'sitedata' as it is used in some variable diagnosis and cleaning.
 ```{r load_data}
 
-data_orig <- read.csv("fullPPN_dataset_2021-03-31_.csv",header = T, na.strings = c("NA", "", "Na", "na", "nA"))
+data_orig <- read.csv("~/PLANTPOPNET/plantpopnet-datacleaning-public/Data/PPN_Y0_2022_01_20.csv",header = T, na.strings = c("NA", "", "Na", "na", "nA"))
 mydata <- data_orig 
 
-sitedata <- read.csv("Coordinates_Oct2020_site_level.csv", header = T)
+sitedata <- read.csv("site_description_2022.csv", header = T)
 
 
 
@@ -42,14 +38,6 @@ sitedata <- read.csv("Coordinates_Oct2020_site_level.csv", header = T)
 mydata$site_code <- as.factor(mydata$site_code)
 mydata$s_year <- as.factor(mydata$s_year)
 mydata$survival <- as.factor(mydata$survival)
-
-## YB: not sure why we want lats & longs to be factors? There are some odd lats & longs that need to be sorted out.
-## can't just be converted directly to numeric
-
-## mydata$transect_Lat_start <- as.factor(mydata$transect_Lat_start)
-## mydata$transect_Lon_start <- as.factor(mydata$transect_Lon_start)
-## mydata$transect_Lat_stop <- as.factor(mydata$transect_Lat_stop)
-## mydata$transect_Lon_stop <- as.factor(mydata$transect_Lon_stop)
 
 ```
 
@@ -68,10 +56,7 @@ Script for a function to output data frame which removes rows/cases with all NA 
 Applies function to the dataset.
 ```{r remove_rows}
 source("Global1_remove_na_rows_func.R")
-
-#1428 NA rows removed (Oct 2020)
-#3467 NA rows removed (March 2021)
-
+#0 NA rows in Y0 dataset
 ```
 ##Global2 - Rename rosette_number column
 The naming of separate variables 'no_of_rosettes' (total number of rosettes recorded for a unique plant) and 'rosette_number' (disambiguation of rosettes within a plant, typically not retained in consecutive years) were confusing. We rename 'rosette number' to 'rosette_ID' but note that this ID can change from year to year as individual rosettes are not usually tagged.
@@ -97,15 +82,10 @@ Code chunks should be run in the sequence below, where variable number equals co
 ```{r site_code}
 # levels(mydata$site_code)
 
-source("var1_site_code_MB_YB.R")
+source("var1_site_code.R")
+#Site JR did not complete a demographic census, but did conrtibute genomic samples. Number of sites = 65
 
-
-# levels(mydata$site_code)
-
-#notes: giving false warning messages about all site codes (af 09/10/20)
-## YB 12/10/2020: fixed in var1_site_code_MB_YB.R
-
-
+#length(unique(mydata$site_code))
 ```
 
 
@@ -115,7 +95,7 @@ Lat and Lon must be stored in decimal degrees. The measurements package can be u
 
 This script contains a number of issues and checks throughout. There is alot of manual checking and fixing required. May require additional input when new sites are added. Refer to comments within script and you may need to run commented code for diagnosis when new sites are added.
 
-** NOTE: 20/10/2020 this code is buggy - but not essential for the rest of the codes to work - see the site summary file for site level coordinates, do not use the transect coordinates **
+** NOTE: 20/10/2020 this code is not essential for the rest of the codes to work - see the site summary file for site level coordinates, if required **
 
 solution
 ```{r coordinates}
@@ -126,7 +106,6 @@ source("var2-5_coordinate_locations_RK_YB.R")
 ```
 
 ### Var 6_7 Transect and Plot
-levels(mydata$plot)
 1. a,b,c,d plots are from HV site which surveyed using a 1m squared quadrat. We divided into 4 plots to make 50cm squared as per PPN protocol. These are to be left as is for now
 2. Duplicate plot numbers for P01-P09 and P1-P9. remove 0s for consistency. 
 3. Plot numbers should range between 1 & 20. One sites continues to P43. Will ignore for now as Plot number is unique and should not cause any issues 
@@ -137,16 +116,16 @@ levels(mydata$transect)
 
 solution
 ```{r transect_plot}
-source("var6_7_transect_plot_numbers_AF_YB.R")
+source("var6_7_transect_plot_numbers.R")
 
 ```
 
 ###Var 8 No_seedlings
 Variable is a factor with text na - needs to be numerical
-
+** Note if a plot contains multiple entries for seedling, the higher value is selected**
 Solution
 ```{r seedlings}
-source("var8_number_seedling_MB_YB.R")
+source("var8_number_seedling.R")
 
 ```
 
@@ -154,8 +133,7 @@ source("var8_number_seedling_MB_YB.R")
 Fixes issues with missing plant IDs and non-unique IDs. Creates a new variable called plant_unique_id
 
 ```{r plantID}
-source("var9_PlantID_MB_YB.R")
-
+source("var9_PlantID.R")
 
 ```
 
@@ -164,7 +142,7 @@ Run the Transect &Plot script again to fix problems with NA's in the BG transect
 
 ```{r transect_plot}
 
-source("var6_7_transect_plot_numbers_AF_YB.R")
+source("var6_7_transect_plot_numbers.R")
 
 ```
 ###Var 10 & 11 Within plot Coordinates (x,y)
@@ -173,14 +151,11 @@ Variable is a factor - should be numerical and between 0 and 50
 ```{r xy_coords_detect, Eval=FALSE}
 ##levels(mydata$x_coord)
 ##levels(mydata$y_coord)
-
-
-
 ```
 
 Solution
 ```{r xy_coords, echo=F}
-source("var10_11_xy_coords_YB.R")
+source("var10_11_xy_coords.R")
 
 
 ######### Note Values still range above 50
@@ -195,7 +170,7 @@ suspected_clone column renamed and preserved as suspected_clone_notes
 
 solution
 ```{r clone, echo=F}
-source("var12_suspected_clone_binary_CM.R")
+source("var12_suspected_clone_binary.R")
 
 ```
 ###Var 28_29 c_year & s_year
@@ -203,33 +178,26 @@ This script must be run before "survival"
 Any errors found will be printed with a warning
 Script is diagnostic only, does not make changes to source data
 ```{r c_year_s_year, echo=F}
-source("var28_29_c_year_and_s_year_YB.R")
+source("var28_29_c_year_and_s_year.R")
 ```
 
 ###Var 13 survival
-Ensuring the survival column is binary (yes/no)
-``` {r survival_check, echo = F, eval=F}
-write.csv(mydata, "mydata_surv_check.csv") ## use this data file for checks to survival code - includes all changes up to here
-```
-
+#Ensuring the survival column is binary (yes/no)
+#``` {r survival_check, echo = F, eval=F}
+#write.csv(mydata, "mydata_surv_check.csv") ## use this data file for checks to survival code - includes #all changes up to here
+#```
+** Note Survival for Y0 should be NA. The script is included here for transparency **
 ```{r survival, echo=F}
-
-source("var13_survival_YB.R")
+source("var13_survival.R")
 
 ```
 
 ###Var 14 No. of rosettes
 Checking no_rosette column, should be a numeric value
 ```{r no_rosettes, echo=F }
-source("var14_no_rosettes_CM_YB.r")  
+source("var14_no_rosettes.r")  
 ```
 
-SURVIVAL SCRIPT NEEDS TO BE RE-RUN  
-Need to re-run plant survival script to ensure that correct values are recorded in plant_survival due to changes in survival as a result of no_rosettes tidying
-```{r no_rosettes_survival, echo = F}
-source("var13_survival_YB.R")
-
-```
 
 ``` {r survival_check, echo = F, eval=F}
 write.csv(mydata, "mydata_ros_check.csv") ## use this data file for checks to rosette ID code - includes all changes up to here
@@ -243,7 +211,7 @@ searching for outliers in the numerical columns
 #### NOTE: This script needs to be run line by line. Doesnt fix multiple flowering stem issue if you run the chunk. 
 #### 
 ```{r outliers, eval=F}
-source("var16-21_outlier_detection_AF.R")
+source("var16-21_outlier_detection.R")
 
 ```
 
@@ -252,7 +220,7 @@ ensuring binary yes/no values in column
 
 soulution
 ```{r disease, echo=F}
-source("var23_disease_yes_no_CM.R")
+source("var23_disease_yes_no.R")
 
 
 levels(mydata$disease..yes.no.)
@@ -260,22 +228,10 @@ levels(mydata$disease..yes.no.)
 
 ### Var 25_26 Herbivory
 ```{r herbivory, echo=F}
-source("var25_herbivory_yes_no_CM.R")
+source("var25_herbivory_yes_no.R")
 
 
 levels(mydata$herbivory..yes.no.)
-```
-
-
-# Production of data products
-```{r year0 } 
-mydataY0 <- subset(mydata, s_year == "Y0")
-
-mydataY1 <- subset(mydata, s_year == "Y1")
-
-mydataY2 <- subset(mydata, s_year == "Y2")
-
-mydataY3 <- subset(mydata, s_year == "Y3")
 ```
 
 ###Var 15 Rosette ID
@@ -298,9 +254,9 @@ write.csv(mydata, output_name, row.names = F)
 ## Export Y0
 
 ```{r export_data}
-output_name <- paste("G:/My Drive/PLANTPOPNET_Master_Data/Data/Drafts/PLANTPOPNET_Y0_V1.3",Sys.Date(), ".csv",  sep = "_") 
+output_name <- paste("~/PLANTPOPNET/plantpopnet-datacleaning-public/Data/PLANTPOPNET_Y0_V1.3",Sys.Date(), ".csv",  sep = "_") 
 
-write.csv(mydataY0, output_name, row.names = F)
+write.csv(mydata, output_name, row.names = F)
 
 
 ## Version notes:
@@ -310,40 +266,3 @@ write.csv(mydataY0, output_name, row.names = F)
 
 ```
 
-## Export Y1
-```{r export_data}
-
-mydataY1$survival <- mydataY1$plant_survival
-
-#mydataY1 <- mydataY1 %>% select(-plant_survival, -plant_survival2)
-
-output_name <- paste("G:/My Drive/PLANTPOPNET_Master_Data/Data/Drafts/PLANTPOPNET_Y1_V1.1",Sys.Date(), ".csv",  sep = "_") 
-
-write.csv(mydataY1, output_name, row.names = F)
-
-```
-
-## Export Y2
-```{r export_data}
-
-mydataY2$survival <- mydataY2$plant_survival
-
-#mydataY1 <- mydataY1 %>% select(-plant_survival, -plant_survival2)
-
-output_name <- paste("G:/My Drive/PLANTPOPNET_Master_Data/Data/Drafts/PLANTPOPNET_Y2_V1.0_DRAFT",Sys.Date(), ".csv",  sep = "_") 
-
-write.csv(mydataY2, output_name, row.names = F)
-
-```
-
-## Export Y3
-```{r export_data}
-
-mydataY3$survival <- mydataY3$plant_survival
-
-
-output_name <- paste("G:/My Drive/PLANTPOPNET_Master_Data/Data/Drafts/PLANTPOPNET_Y3_V1.0_DRAFT",Sys.Date(), ".csv",  sep = "_") 
-
-write.csv(mydataY3, output_name, row.names = F)
-
-```

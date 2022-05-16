@@ -158,8 +158,7 @@ outliers <- mydata %>%
 
 #subset data by study year 
 Y0 <- outliers %>% filter (s_year == "Y0")
-Y1 <- outliers %>% filter (s_year == "Y1")
-Y2 <- outliers %>% filter (s_year == "Y2")
+
 
 sum0 <- Y0 %>% 
     group_by(site_code) %>% 
@@ -170,21 +169,7 @@ sum0 <- Y0 %>%
 
 View(sum0)
 
-sum1 <- Y1 %>% 
-  group_by(site_code) %>% 
-  summarize(avgleaflen = mean(leaf_length, na.rm = TRUE), maxlen = max(leaf_length, na.rm = TRUE),
-            avgleafwid = mean(leaf_width, na.rm = TRUE), maxwid = max(leaf_width, na.rm = TRUE),
-            avgstemheight = mean(fl_stem_height, na.rm = TRUE), maxstem = max(fl_stem_height, na.rm = TRUE),
-            avginflor = mean(inflor_length, na.rm = TRUE), maxinflor = max(inflor_length, na.rm = TRUE))
-View(sum1)
 
-sum2 <- Y2 %>% 
-  group_by(site_code) %>% 
-  summarize(avgleaflen = mean(leaf_length, na.rm = TRUE), maxlen = max(leaf_length, na.rm = TRUE),
-            avgleafwid = mean(leaf_width, na.rm = TRUE), maxwid = max(leaf_width, na.rm = TRUE),
-            avgstemheight = mean(fl_stem_height, na.rm = TRUE), maxstem = max(fl_stem_height, na.rm = TRUE),
-            avginflor = mean(inflor_length, na.rm = TRUE), maxinflor = max(inflor_length, na.rm = TRUE))
-View(sum2)
 
 ##########  Y0 ############
 
@@ -221,54 +206,54 @@ x5 <- Y0 %>% group_by(site_code) %>% mutate(z_score = scale(inflor_length))
 x5 <- x5%>% filter(z_score >= -5&z_score >=5)
 
 
-############ Y1 ##########
-
-####### no. of leaves ########
-x1 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(no_leaves))
-x1 <- x1 %>% filter(z_score >= -5&z_score >=5)
-
-
-##### Leaf length #######
-x2<- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_length))
-x2 <- x2 %>% filter(z_score >= -5&z_score >=5)
-
-###### leaf width ######
-x3 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_width))
-x3 <- x3 %>% filter(z_score >= -5&z_score >=5)
-
-
-#### fl_stem_height ######
-x4 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(fl_stem_height))
-x4 <- x4%>% filter(z_score >= -5&z_score >=5)
-
-#### inflor_length #####
-x5 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(inflor_length))
-x5 <- x5%>% filter(z_score >= -5&z_score >=5)
-
-
-############ Y2 ##########
-
-####### no. of leaves ########
-x1 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(no_leaves))
-x1 <- x1 %>% filter(z_score >= -5&z_score >=5)
-
-
-##### Leaf length #######
-x2<- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_length))
-x2 <- x2 %>% filter(z_score >= -5&z_score >=5)
-
-###### leaf width ######
-x3 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_width))
-x3 <- x3 %>% filter(z_score >= -5&z_score >=5)
-
-
-#### fl_stem_height ######
-x4 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(fl_stem_height))
-x4 <- x4%>% filter(z_score >= -5&z_score >=5)
-
-#### inflor_length #####
-x5 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(inflor_length))
-x5 <- x5%>% filter(z_score >= -5&z_score >=5)
+# ############ Y1 ##########
+# 
+# ####### no. of leaves ########
+# x1 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(no_leaves))
+# x1 <- x1 %>% filter(z_score >= -5&z_score >=5)
+# 
+# 
+# ##### Leaf length #######
+# x2<- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_length))
+# x2 <- x2 %>% filter(z_score >= -5&z_score >=5)
+# 
+# ###### leaf width ######
+# x3 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_width))
+# x3 <- x3 %>% filter(z_score >= -5&z_score >=5)
+# 
+# 
+# #### fl_stem_height ######
+# x4 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(fl_stem_height))
+# x4 <- x4%>% filter(z_score >= -5&z_score >=5)
+# 
+# #### inflor_length #####
+# x5 <- Y1 %>% group_by(site_code) %>% mutate(z_score = scale(inflor_length))
+# x5 <- x5%>% filter(z_score >= -5&z_score >=5)
+# 
+# 
+# ############ Y2 ##########
+# 
+# ####### no. of leaves ########
+# x1 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(no_leaves))
+# x1 <- x1 %>% filter(z_score >= -5&z_score >=5)
+# 
+# 
+# ##### Leaf length #######
+# x2<- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_length))
+# x2 <- x2 %>% filter(z_score >= -5&z_score >=5)
+# 
+# ###### leaf width ######
+# x3 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(leaf_width))
+# x3 <- x3 %>% filter(z_score >= -5&z_score >=5)
+# 
+# 
+# #### fl_stem_height ######
+# x4 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(fl_stem_height))
+# x4 <- x4%>% filter(z_score >= -5&z_score >=5)
+# 
+# #### inflor_length #####
+# x5 <- Y2 %>% group_by(site_code) %>% mutate(z_score = scale(inflor_length))
+# x5 <- x5%>% filter(z_score >= -5&z_score >=5)
 
 
 rm(x1,x2,x3,x4,x5,Y0,Y1,Y2,outliers,x,y,infl,infl_height,stem_height,st,cols,stem_pos,cha,sub)

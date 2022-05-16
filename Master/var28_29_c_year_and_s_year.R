@@ -7,7 +7,7 @@
 ## Diagnostic only - no script changes to source
 
 #mydata <- read.csv("fullPPN_dataset_2019-07-01_.csv", header = T)
-
+mydata$s_year <- as.factor(mydata$s_year)
 ##  s_year should be a factor
 x <- is.factor(mydata$s_year) ## should be TRUE
 if(x != TRUE) warning('check that s_year is a factor e.g. Y0, Y1 etc')

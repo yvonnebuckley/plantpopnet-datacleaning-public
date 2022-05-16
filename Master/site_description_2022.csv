@@ -1,0 +1,67 @@
+site_code,native,demographics,genetics,country,location,region,latitude,longitude,coordinator
+AC,native,y,y,Spain,Archuchurria,Europe,41.31785,1.950016,MunneBosch
+ACR,non_native,y,y,USA,California,Nth_America,39.71315,-123.65177,Petry
+AL1,native,y,n,Finland,Aland island,Europe,60.22,19.54,Anna-Liisa Laine
+AL2,native,y,n,Finland,Aland island,Europe,60.13,19.98,Anna-Liisa Laine
+ARH,native,y,y,Norway,Arhelleren,Europe,60.6652,6.33738,LieOlsen
+BG,native,y,y,Norway,Bargarden,Europe,61.4481,7.480683,HorunnHamre
+BHU,non_native,y,y,NewZealand,Lincoln,Australasia,-43.649957,172.456083,Groenteman
+BI,native,y,y,Ireland,BullIsland,Europe,53.372436,-6.168165,Villellas
+BL,native,y,n,Germany,Bad Lauchstadt,Europe,51.39268,11.88463,"Lotte Korell, Martin Andrzejak"
+CDF,native,y,y,Ireland,DistilleryFields,Europe,51.899611,-8.485889,Wingler
+CH,native,y,y,Ireland,Coolclough,Europe,52.144308,-8.948419,Buckley
+CP,non_native,y,n,Australia,CoombaPark,Australasia,-32.2235,152.4515,Vesk
+DP,non_native,y,y,Australia,DuttonPark,Australasia,-27.49837,153.02602,SalgueroGomez_Dwyer
+EE,native,y,y,Estonia,Allika,Europe,58.717116,23.771596,Helm
+EL,native,y,y,Estonia,Elva,Europe,58.259717,26.35125,Partel
+GB,non_native,y,y,USA,Franklin,Nth_America,35.2291,-83.39025,Elderd
+GH,non_native,y,y,Canada,Guelph,Nth_America,43.534722,-80.211667,Caruso
+GU,native,y,n,Norway,GuriskJaer,Europe,59.33587,10.48914,Skarpaas
+HAS,non_native,y,y,USA,California,Nth_America,36.37865,-121.56724,Petry
+HR,native,y,y,Romania,HargitaMountains,Europe,46.34465,25.617017,Csergo
+HU,native,y,y,Hungary,Keszthely,Europe,46.7493,17.23734,Bodis
+HUFZ,native,y,n,Germany,Halle,Europe,51.49567,11.93669,"Lotte Korell, Aldo Compagnoni, Sam Levin"
+HV,non_native,y,y,USA,Harvard,Nth_America,42.48566,-71.5687,Crone
+IO,native,y,y,Ireland,InisOirr,Europe,53.05706,-9.51672,Csergo_Buckley
+JE,native,y,y,Germany,Jena,Europe,50.95192,11.62282,Roscher_Roeder
+JR,non_native,n,y,USA,JasperRidge,Nth_America,37.408,-122.2275,Anderegg
+JSJ,non_native,y,n,USA,California,Nth_America,33.80889,-116.77673,Petry
+KM,native,y,y,Estonia,Kyynimts,Europe,57.73493,26.53314,Kull
+LK1,native,y,y,UK,Sheffield,Europe,53.192433,-1.762361,SalgueroGomez_Childs
+MN,native,y,y,UK,Manchester,Europe,53.37982,-2.21606,Brearley
+NRM,non_native,y,y,USA,California,Nth_America,35.52435,-121.07378,Petry
+OR_SS,native,y,y,Sweden,Stockholm,Europe,59.269244,18.101127,Rasmussen
+PA,native,y,y,Spain,Panticosa,Europe,42.757399,-0.236718,GarciaGonzalez
+PC,non_native,y,y,USA,California,Nth_America,38.517701,-121.764322,Gremer
+PM,native,y,n,CzechRepublic,Pruhonice,Europe,50.7776,14.8929,Munzbergova
+RO,non_native,y,y,Canada,Rosedale,Nth_America,49.28742,-121.66956,Fraser
+RO_IS,native,y,y,Romania,Isai,Europe,47.184917,27.556861,Oprea
+RUSC,non_native,y,n,USA,Houston,Nth_America,29.65724,-95.44385,Compagnoni
+SBK,native,y,n,Hungary,Budapest,Europe,47.40025,19.15878,"Maria Hohn, Anna Csergo"
+SC,native,y,y,Ireland,SlieveCarran,Europe,53.07227,-8.99232,Buckley
+SI,native,y,y,Finland,Seili,Europe,60.23695,21.959783,Ramula 
+STB,non_native,y,n,Australia,Stradbrook,Australasia,-27.2939,153.2416,Firn
+STR,non_native,y,n,USA,California,Nth_America,33.62595,-117.55676,Petry
+SW242,native,y,y,Switzerland,"Sendy-Sollard, Vaud",Europe,46.4453,6.931455,Maude Baudraz
+SW729,native,y,y,Switzerland,"Les Grandes Charbonnières, Vaud",Europe,46.40478,7.06198,Maude Baudraz
+TG,native,y,n,Sweden,Sweden,Europe,58.951835,17.616575,Ehlren
+TJ,native,y,n,Sweden,Sweden,Europe,58.975639,17.563148,Ehlren
+TNC,non_native,y,n,USA,Oregon,Nth_America,44.03775,-123.1665,Ferguson_Schultz
+TNM,native,y,y,Ireland,Donegal,Europe,55.24556,-7.61744,Kelly
+TO,native,y,n,Italy,Torino,Europe,45.064965,7.589508,Lonati
+TRU,non_native,y,n,USA,Missouri,Nth_America,40.17806,-92.60035,Drew Sieg
+TUE,native,y,y,Germany,Tuebingen,Europe,48.53971,9.036808,Lampei_Bucharova
+TW,non_native,y,y,Australia,Toowomba,Australasia,-27.5811,151.98784,SalgueroGomez_Dwyer
+TY,non_native,y,n,USA,Missouri,Nth_America,38.525351,-90.561589,Rachel Penczykowski
+UC,non_native,y,y,Australia,Canberra,Australasia,-35.234303,149.08505,Wandrag
+UR,non_native,y,n,Australia,Urquhart,Australasia,-37.19098,144.38359,Moore
+VA,non_native,y,y,USA,Virginia,Nth_America,37.967365,-78.473958,Roach
+WIN,native,y,y,UK,Southampton,Europe,51.0432,-1.30818,Catford
+ZG,native,y,y,Spain,Zaragoza,Europe,41.68952,-0.932392,Villellas
+ZM,native,y,n,CzechRepublic,Zdislava,Europe,49.9955,14.5666,Munzbergova
+MACD,non-native,y,n,Australia,,Australasia,-34.065,150.774,Wardle
+CPA,non-native,y,n,USA,,Nth_America,40.7105796,-77.9418474,Drees
+HO,native,y,n,Hungary,,Europe,47.53594098,20.95262777,Valko_Deak
+AG,native,y,n,Germany,,Europe,51.503365,11.94508,Rosche_Kozic
+PER,native,y,n,Spain,,Europe,42.73528,-1.742521,Puy
+MN2,native,y,n,UK,Manchester,Europe,53.37982,-2.21606,Brearley
