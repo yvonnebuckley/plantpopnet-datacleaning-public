@@ -10,7 +10,7 @@ Each error was assigned a unique identifier. Once an error is indentified by the
 
 
 ```{r setup}
-knitr::opts_knit$set(root.dir = "~/Plantpopnet-Data-Cleaning/Master")
+knitr::opts_knit$set(root.dir = "~/PLANTPOPNET/plantpopnet-datacleaning-public/Master")
 ```
 
 
@@ -102,7 +102,7 @@ solution
 Sys.setlocale('LC_ALL','C') ## needed to deal with some encoding issues (Mac to PC) if all ok print-out will read "[1] "C/C/C/C/C/en_IE.UTF-8" " . No action necessary
 
 
-source("var2-5_coordinate_locations_RK_YB.R")
+source("var2-5_coordinate_locations.R")
 ```
 
 ### Var 6_7 Transect and Plot
@@ -188,7 +188,12 @@ source("var28_29_c_year_and_s_year.R")
 #```
 ** Note Survival for Y0 should be NA. The script is included here for transparency **
 ```{r survival, echo=F}
+#mydata$survival <- as.factor(mydata$survival)
+#levels(mydata$survival)
+
 source("var13_survival.R")
+
+
 
 ```
 
@@ -215,6 +220,7 @@ source("var16-21_outlier_detection.R")
 
 ```
 
+
 ###Var 23_24 Disease_yes_no
 ensuring binary yes/no values in column
 
@@ -234,21 +240,14 @@ source("var25_herbivory_yes_no.R")
 levels(mydata$herbivory..yes.no.)
 ```
 
+
+
+
 ###Var 15 Rosette ID
 This script is stalling on the full data set. Run last on each SDP before final export. 
 ```{r rosette_id, echo = F}
 source("var15_rosette_id_CM.r")  ##this script has become very slow to run. check code 27/02/20
 ```
-
-## Export All
-
-```{r export_data}
-output_name <- paste("G:/My Drive/PLANTPOPNET_Master_Data/Data/Drafts/PLANTPOPNET_FULL_CLEAN",Sys.Date(), ".csv",  sep = "_") 
-
-write.csv(mydata, output_name, row.names = F)
-
-```
-
 
 
 ## Export Y0

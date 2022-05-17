@@ -57,7 +57,7 @@ has_site_coords <- levels(has_coords$site_code)
 
 #### Check which sites have no transect coordinates in either file. 
 sites_no_coords <- setdiff(na_site_coords,has_site_coords)
-# [1] "ARH"   "CPA"   "PM"    "SBK"   "SW242" "SW729" "TJ"    "ZM"  
+# [1] "ARH"   "CPA"   "PM"    "SBK"   "SW242" "SW729" "TJ"  "TG"  "ZM"  
 
 ##### No transect coordinates were supplied for these sites in the original 
 #### files no fix needs to be applied here. Leave data as is. 
@@ -128,7 +128,7 @@ BG$transect_Lon_stop <- as.factor(BG$transect_Lon_stop)
 summary(BG[,c("transect_Lat_start", "transect_Lat_stop",
           "transect_Lon_start", "transect_Lon_stop")])
 
-#### Note 170 = NA
+#### NOTE THE FOLLOWING CODE FOR THIS SITE IS APPLICABLE FOR Y1 ONWARDS ONLY ####
 
 ###########
 #table(BG$transect, BG$transect_Lat_start)
@@ -513,6 +513,7 @@ err1 <- which(rowSums(check_table[,3:6]) != 4)
 tocheck2 <- check_table[err1,]
 
 site_checks <- unique(tocheck2$site_code)
+### NOTE ONLY TW NEEDS COORECTING IN Y0
 # [1]  CDF  CH   HV   MACD PA   SBK  SC   TNC  TNM  TRU  TW   WIN 
 # 12 sites 08/06/2021
 
@@ -797,22 +798,23 @@ TW %>%
 ### only one transect at this site - T1 . Examine this..
 
 #unique(TW$transect_Lat_start[TW$c_year == "2015"])
-#unique(TW$transect_Lon_stop[TW$c_year == "2015"])
+unique(TW$transect_Lon_stop[TW$c_year == "2015"])
 #### This looks like a 'fill cells' error from excel in 2015 data, 
 ### numbers are increasing sequentially
 
-#### Replace these with the values to Lat Start and Lon start from 2016
+#### Replace these with the correct value
+mydata[mydata$site_code == "TW","transect_Lon_stop"] <- 151.9878 
 
 #### Fix as follows 
 
-TW_LatStr <- unique(TW$transect_Lat_start[TW$c_year == "2016"])
-TW_LonStp <- unique(TW$transect_Lon_stop[TW$c_year == "2016"])
-
-
-mydata[mydata$site_code == "TW","transect_Lat_start"] <- TW_LatStr 
-mydata[mydata$site_code == "TW","transect_Lon_stop"]  <-  TW_LonStp
-
-site_checks_resolved[7] <- "TW"
+# TW_LatStr <- unique(TW$transect_Lat_start[TW$c_year == "2016"])
+# TW_LonStp <- unique(TW$transect_Lon_stop[TW$c_year == "2016"])
+# 
+# 
+# mydata[mydata$site_code == "TW","transect_Lat_start"] <- TW_LatStr 
+# mydata[mydata$site_code == "TW","transect_Lon_stop"]  <-  TW_LonStp
+# 
+# site_checks_resolved[7] <- "TW"
 
 ## next one - WIN site_checks[8]
 WIN <- droplevels(mydata[mydata$site_code == "WIN",])
